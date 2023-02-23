@@ -30,6 +30,8 @@ class Dev(Configuration):
   ALLOWED_HOSTS = values.ListValue(["localhost", "0.0.0.0", '127.0.0.1', ".codio.io"])
   INTERNAL_IPS = ["192.168.11.179"]
 
+  AUTH_USER_MODEL = "blango_auth.User" 
+
   # Application definition
 
   INSTALLED_APPS = [
@@ -43,6 +45,7 @@ class Dev(Configuration):
       'crispy_forms',
       'crispy_bootstrap5',
       'debug_toolbar',
+      'blango_auth',
   ]
 
   MIDDLEWARE = [
