@@ -4,5 +4,6 @@ dj-database-url==1.2.0
 Django==3.2.5
 django-configurations==2.4
 django-crispy-forms==1.14.0
+django_debug_toolbar==3.8.1
 pytz==2022.6
 sqlparse==0.4.3
