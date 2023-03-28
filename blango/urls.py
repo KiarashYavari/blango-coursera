@@ -18,11 +18,15 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
 import blog.views
+import blango_auth.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include('blog.urls')),
-    path("ip/", blog.views.get_ip)
+    path("ip/", blog.views.get_ip),
+    path("accounts/", include("django.contrib.auth.urls")),
+    path("accounts/profile/", blango_auth.views.profile,
+        name="profile"),
 ]
 if settings.DEBUG:
     urlpatterns += [
